@@ -1,32 +1,92 @@
-const play = document.querySelector('#play')
-const menuitems = Array.from(document.querySelectorAll('.menu'))
-const social = document.querySelector('#social')
-const socialitems = document.querySelector('.socialicons')
+const buttons = Array.from(document.querySelectorAll('.button'))
+const contents = Array.from(document.querySelectorAll('.content'))
 
-play.addEventListener('click', evt => {
-  if (evt.target.id === 'play')
-    menuitems.forEach(menu => {
-      if (
-        menu.classList.contains('menuon') ||
-        social.classList.contains('menuon')
-      )
-        menu.classList.remove('menuon')
-      else menu.classList.add('menuon')
-      socialitems.classList.remove('socialon')
-    })
-})
+//Typewriter Effect
 
-social.addEventListener('click', evt => {
-  if (socialitems.classList.contains('socialon')) {
-    socialitems.classList.remove('socialon')
-    menuitems.forEach(menu => {
-      menu.classList.add('menuon')
-    })
-  } else {
-    socialitems.classList.add('socialon')
-    menuitems.forEach(menu => {
-      menu.classList.remove('menuon')
-    })
-    social.classList.add('menuon')
+function setupTypewriter(t) {
+  var HTML = t.innerHTML
+  t.innerHTML = ''
+  var cursorPosition = 0,
+    tag = '',
+    writingTag = false,
+    tagOpen = false,
+    typeSpeed = 100,
+    tempTypeSpeed = 0
+
+  var type = function() {
+    if (writingTag === true) {
+      tag += HTML[cursorPosition]
+    }
+
+    if (HTML[cursorPosition] === '<') {
+      tempTypeSpeed = 0
+      if (tagOpen) {
+        tagOpen = false
+        writingTag = true
+      } else {
+        tag = ''
+        tagOpen = true
+        writingTag = true
+        tag += HTML[cursorPosition]
+      }
+    }
+    if (!writingTag && tagOpen) {
+      tag.innerHTML += HTML[cursorPosition]
+    }
+    if (!writingTag && !tagOpen) {
+      if (HTML[cursorPosition] === ' ') {
+        tempTypeSpeed = 0
+      } else {
+        tempTypeSpeed = Math.random() * typeSpeed + 50
+      }
+      t.innerHTML += HTML[cursorPosition]
+    }
+    if (writingTag === true && HTML[cursorPosition] === '>') {
+      tempTypeSpeed = Math.random() * typeSpeed + 50
+      writingTag = false
+      if (tagOpen) {
+        var newSpan = document.createElement('span')
+        t.appendChild(newSpan)
+        newSpan.innerHTML = tag
+        tag = newSpan.firstChild
+      }
+    }
+
+    cursorPosition += 1
+    if (cursorPosition < HTML.length - 1) {
+      setTimeout(type, tempTypeSpeed)
+    }
   }
+
+  return {
+    type: type,
+  }
+}
+
+var typewriter = document.getElementById('typewriter')
+
+typewriter = setupTypewriter(typewriter)
+
+let x = true
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (btn.classList.contains('about') && x) {
+      typewriter.type()
+      x = false
+    }
+    buttons.forEach(b => {
+      b.classList.remove('buttonoff')
+    })
+    btn.classList.add('buttonoff')
+    const contentclass = btn.classList[1] + 'window'
+    contents.forEach(ctn => {
+      ctn.classList.add('contentoff')
+      ctn.classList.remove('contenton')
+      if (ctn.classList.contains(contentclass)) {
+        ctn.classList.remove('contentoff')
+        ctn.classList.add('contenton')
+      }
+    })
+  })
 })
