@@ -90,3 +90,43 @@ buttons.forEach(btn => {
     })
   })
 })
+//Caraousel Effect
+const carouselslide = document.querySelector('.slidecontainer')
+const carouseldivs = Array.from(document.querySelectorAll('.carouseldiv'))
+
+const workleft = document.querySelector('.workleft')
+const workright = document.querySelector('.workright')
+
+let counter = 1
+const size = carouseldivs[0].clientWidth
+
+carouselslide.style.transform = `translateX(${-size * counter}px)`
+
+workright.addEventListener('click', () => {
+  if (counter >= carouseldivs.length - 1) return
+  carouselslide.style.transition =
+    'transform 2.2s cubic-bezier(1,-0.8,.02,1.71)'
+  counter++
+  carouselslide.style.transform = `translateX(${-size * counter}px)`
+})
+
+workleft.addEventListener('click', () => {
+  if (counter <= 0) return
+  carouselslide.style.transition =
+    'transform 2.2s cubic-bezier(1,-0.8,.02,1.71)'
+  counter--
+  carouselslide.style.transform = `translateX(${-size * counter}px)`
+})
+
+carouselslide.addEventListener('transitionend', () => {
+  if (carouseldivs[counter].id === 'lastclone') {
+    carouselslide.style.transition = 'none'
+    counter = carouseldivs.length - 2
+    carouselslide.style.transform = `translateX(${-size * counter}px)`
+  }
+  if (carouseldivs[counter].id === 'firstclone') {
+    carouselslide.style.transition = 'none'
+    counter = carouseldivs.length - counter
+    carouselslide.style.transform = `translateX(${-size * counter}px)`
+  }
+})

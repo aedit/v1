@@ -35,7 +35,33 @@
       </div>
     </main>
     <main class="content workwindow contentoff">
-      <h2>Work</h2>
+      <div class="workcontainer">
+        <h2>Work</h2>
+        <div class="carouselcontainer">
+          <div class="slidecontainer">
+            <article
+              class="carouseldiv"
+              style="background: purple"
+              id="lastclone"
+            >
+              A
+            </article>
+            <article class="carouseldiv" style="background: white">A</article>
+            <article class="carouseldiv" style="background: blue">A</article>
+            <article class="carouseldiv" style="background: red">A</article>
+            <article class="carouseldiv" style="background: green">A</article>
+            <article class="carouseldiv" style="background: orange">A</article>
+            <article class="carouseldiv" style="background: purple">A</article>
+            <article
+              class="carouseldiv"
+              style="background: white"
+              id="firstclone"
+            >
+              A
+            </article>
+          </div>
+        </div>
+      </div>
       <aside class="workleft"></aside>
       <aside class="workright"></aside>
     </main>
@@ -51,7 +77,6 @@
             class="wrap-input100 rs1-wrap-input100 validate-input"
             data-validate="Name is required"
           >
-            <span class="label-input100">Your Name</span>
             <input
               class="input100"
               type="text"
@@ -65,7 +90,6 @@
             class="wrap-input100 rs1-wrap-input100 validate-input"
             data-validate="Valid email is required: ex@abc.xyz"
           >
-            <span class="label-input100">Email</span>
             <input
               class="input100"
               type="text"
@@ -79,7 +103,6 @@
             class="wrap-input100 validate-input"
             data-validate="Message is required"
           >
-            <span class="label-input100">Message</span>
             <textarea
               class="input100"
               name="message"
@@ -143,26 +166,10 @@ Artificial Intelligence Enthusiast
         </div>
       </div>
     </main>
+    <div id="particles-js"></div>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- stats.js lib -->
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="./particles.js"></script>
   </body>
 </html>
-
-<!--
-  <div class="search-info">
-<div class="search-info__container">
-<div class="search-info__content">
-<h4 class="search-info__title">
-<i class="search-info__icon">i</i>
-Advanced search tips
-</h4>
-<ol class="search-info__text">
-<li>
-Exclude a word by adding a dash before it (E.g. <a href="/search/technology%20-apple/" data-track-action="search" data-track-label="exclude-word-example">technology -apple</a>)
-</li>
-<li>
-Search for colors: E.g. <a href="/search/color:%20blue/" data-track-action="search" data-track-label="color-search-example">color: blue</a>
-</li>
-</ol>
-</div>
-</div>
-</div>
--->
