@@ -1,7 +1,7 @@
 * {
-  font-family: 'Google Sans', 'Open Sans', 'Sans' ;
+  font-family: 'Google Sans', 'Open Sans', 'Sans';
   box-sizing: border-box;
-  color:white
+  color: white;
 }
 ::selection {
   background: #c0c0c0;
@@ -10,33 +10,38 @@
 }
 body {
   overflow: hidden;
-  background-color: black ;
-  z-index:-3;
+  background-color: black;
+  z-index: -3;
   /* background-image: linear-gradient(to bottom, #242424 -100% , #000000 200%  ); */
 }
-.social{
+.social {
   position: fixed;
   right: 0;
   top: 0;
-  width: 25vw;
+  width: 20vw;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   height: 10vh;
   z-index: 3;
+  transition: all 500ms ease-out;
 }
-.social a{
+.social a {
   background: rgba(0, 0, 0, 0.5);
-  padding: 1em 1.25em;
+  padding: 0.8em 1em;
   border-radius: 50%;
   text-decoration: none;
-  color:white
+  color: white;
+  border: 0.1em dotted #c0c0c0;
 }
-#particles-js{
+.social p {
+  display: none;
+}
+#particles-js {
   position: fixed;
   left: 0;
   right: 0;
-  top:0;
+  top: 0;
   bottom: 0;
   z-index: -1;
 }
@@ -55,13 +60,9 @@ label {
   padding: 5px;
   border-radius: 15px;
   /* text-shadow: 0 0 4px currentColor; */
-  
 }
-.button:hover{
+.button:hover {
   box-shadow: 0 0 30px #ffffff60;
-
-  
-
 }
 .home {
   top: 0;
@@ -72,7 +73,6 @@ label {
   border-bottom: 0.1em double currentColor;
   font-size: 40px;
   padding: 25px 50px;
-  
 }
 .work {
   top: 50%;
@@ -116,15 +116,15 @@ label {
   justify-content: center;
   overflow: hidden;
   transition: all 500ms linear;
-  background: transparent;x
+  background: transparent;
 }
 
 .hometext {
   text-align: center;
 }
-.hometitle{
+.hometitle {
   font-size: 4rem;
-  text-shadow: 0 0 5px currentColor
+  text-shadow: 0 0 5px currentColor;
 }
 .buttonoff {
   display: none;
@@ -143,6 +143,9 @@ label {
 .workwindow.contentoff {
   transform: translate(100%, 0);
 }
+.contentoff {
+  visibility: hidden;
+}
 
 .workwindow {
   position: relative;
@@ -158,8 +161,7 @@ label {
   border-bottom-color: transparent;
   border-left-color: transparent;
   transform: translate(-50%, -50%);
-  z-index:2;
-  
+  z-index: 2;
 }
 .workright {
   top: 50%;
@@ -171,39 +173,69 @@ label {
   border-bottom-color: transparent;
   border-right-color: transparent;
   transform: translate(-50%, -50%);
-  z-index:2;
+  z-index: 2;
 }
-.workcontainer{
+.workcontainer {
   display: grid;
   justify-items: center;
   grid-template-rows: 1fr 8fr;
 }
-.carouselcontainer{
+.carouselcontainer {
   width: 60vw;
   overflow: hidden;
-  
-  /* border: 5px solid white; */
 }
-.slidecontainer{
+.slidecontainer {
   display: grid;
-  grid-template-columns: repeat(8,60vw);
+  grid-template-columns: repeat(8, 60vw);
   width: 100%;
   height: 100%;
 }
-article{
+article {
   width: 100%;
   background: transparent;
-  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.project {
+  width: 50%;
+  text-align: right;
+  height: 70%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 4em 0 4em 2em;
+  flex-direction: column;
+  background-size: cover;
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 30px #c0c0c0;
+  border-radius: 8px;
+}
+.projecttitle,
+.projectdesc {
+  padding: 0.5em 1em;
+  margin: 0;
+  background: #33333360;
+}
+
 .contactimage {
   width: 40%;
   height: 100%;
-  
 }
 .aboutimage {
   width: 40%;
   height: 100%;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutimagecontainer {
+  width: 60%;
+  background-image: url('./images/udit.jpg');
+  height: 60%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 30px #c0c0c0;
 }
 .aboutcontent {
   width: 60%;
@@ -255,7 +287,7 @@ article{
 }
 .certificate:hover,
 .skill:hover,
-.resume:hover{
+.resume:hover {
   box-shadow: 0 10px 30px 0px #d2ccc480;
   background-color: gray;
 }
@@ -304,4 +336,38 @@ article{
 
 .certificatetext li {
   margin-top: 10px;
+}
+.project-image1 {
+  background-image: url('./images/p (1).png');
+}
+.project-image2 {
+  background-image: url('./images/p (2).png');
+}
+.project-image3 {
+  background-image: url('./images/p (3).png');
+}
+.project-image4 {
+  background-image: url('./images/p (4).png');
+}
+.project-image5 {
+  background-image: url('./images/p (5).png');
+}
+.project-image6 {
+  background-image: url('./images/p (6).png');
+}
+.contactwindow.contenton ~ .social {
+  flex-direction: column;
+  height: 20vw;
+  width: 10vh;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%) scale(1.4);
+}
+.contactwindow.contenton ~ .social p {
+  display: block;
+  position: absolute;
+  left: -70%;
+  top: 50%;
+
+  transform: translateY(-100%) rotate(270deg);
 }
