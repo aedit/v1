@@ -1,13 +1,36 @@
 * {
-  font-family: 'Google Sans', 'Open Sans', 'Sans' !important;
+  font-family: 'Google Sans', 'Open Sans', 'Sans' ;
   box-sizing: border-box;
   color:white
+}
+::selection {
+  background: #c0c0c0;
+  color: black;
+  text-shadow: 0 0 1em 0 #c0c0c0;
 }
 body {
   overflow: hidden;
   background-color: black ;
   z-index:-3;
   /* background-image: linear-gradient(to bottom, #242424 -100% , #000000 200%  ); */
+}
+.social{
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 25vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 10vh;
+  z-index: 3;
+}
+.social a{
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1em 1.25em;
+  border-radius: 50%;
+  text-decoration: none;
+  color:white
 }
 #particles-js{
   position: fixed;
@@ -21,15 +44,24 @@ input,
 label {
   font-family: 'Google Sans', 'Open Sans', 'Sans';
 }
+
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2;
-  background: #C0C0C0;
-  color: black;
+  cursor: pointer;
+  color: white;
   padding: 5px;
   border-radius: 15px;
+  /* text-shadow: 0 0 4px currentColor; */
+  
+}
+.button:hover{
+  box-shadow: 0 0 30px #ffffff60;
+
+  
+
 }
 .home {
   top: 0;
@@ -37,9 +69,10 @@ label {
   transform: translate(-50%, 0);
   position: fixed;
   height: 40px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  font-size: 30px;
+  border-bottom: 0.1em double currentColor;
+  font-size: 40px;
+  padding: 25px 50px;
+  
 }
 .work {
   top: 50%;
@@ -48,8 +81,8 @@ label {
   writing-mode: vertical-lr;
   width: 40px;
   transform: translate(0, -50%);
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-left: 0.2em double currentColor;
+  padding: 50px 5px;
 }
 .contact {
   bottom: 0;
@@ -57,8 +90,8 @@ label {
   transform: translate(-50%, 0);
   position: fixed;
   height: 40px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-top: 0.2em double currentColor;
+  padding: 5px 50px;
 }
 .about {
   top: 50%;
@@ -68,8 +101,8 @@ label {
   writing-mode: vertical-lr;
   transform: translate(0, -50%) rotate(180deg);
   width: 40px;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-left: 0.2em double currentColor;
+  padding: 50px 5px;
 }
 .content {
   z-index: 0;
@@ -88,6 +121,10 @@ label {
 
 .hometext {
   text-align: center;
+}
+.hometitle{
+  font-size: 4rem;
+  text-shadow: 0 0 5px currentColor
 }
 .buttonoff {
   display: none;
@@ -142,8 +179,9 @@ label {
   grid-template-rows: 1fr 8fr;
 }
 .carouselcontainer{
-  width: 59vw;
+  width: 60vw;
   overflow: hidden;
+  
   /* border: 5px solid white; */
 }
 .slidecontainer{
@@ -154,7 +192,8 @@ label {
 }
 article{
   width: 100%;
-  background: white;
+  background: transparent;
+  border: 2px solid white;
 }
 .contactimage {
   width: 40%;

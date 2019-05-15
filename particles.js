@@ -39,7 +39,7 @@ particlesJS('particles-js', {
     detect_on: 'window',
     events: {
       onhover: { enable: true, mode: 'grab' },
-      onclick: { enable: true, mode: 'bubble' },
+      onclick: { enable: false, mode: 'bubble' },
       resize: true,
     },
     modes: {

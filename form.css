@@ -109,7 +109,7 @@ button:hover {
 .contact100-form-title {
   display: block;
   width: 100%;
-  font-family: Poppins-Bold;
+  font-family: 'Google Sans', 'Open Sans';
   font-size: 39px;
   color: #fff;
   line-height: 1.2;
@@ -133,7 +133,7 @@ button:hover {
 }
 
 .label-input100 {
-  font-family: Poppins-Regular;
+  font-family: 'Google Sans', 'Open Sans';
   font-size: 15px;
   color: #999999;
   line-height: 1.5;
@@ -144,7 +144,7 @@ button:hover {
   display: block;
   width: 100%;
   background: transparent;
-  font-family: Poppins-SemiBold;
+  font-family: 'Google Sans', 'Open Sans';
   font-size: 18px;
   color: #fff;
   line-height: 1.2;
@@ -233,13 +233,13 @@ textarea.input100 {
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #333333;
-  box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+
+  border: 0.3em double currentColor;
 }
 
 .contact100-form-btn:hover {
-  box-shadow: 0 10px 30px 0px #d2ccc480;
-  background-color: gray;
+  box-shadow: 0 0 30px 0px #d2ccc480;
+  background-color: black;
 }
 
 .contact100-form-btn:hover i {
@@ -282,7 +282,7 @@ textarea.input100 {
 [ Contact more ]*/
 
 .contact100-more {
-  font-family: Poppins-Regular;
+  font-family: 'Google Sans', 'Open Sans';
   font-size: 14px;
   color: #999999;
   line-height: 1.5;
