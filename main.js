@@ -98,6 +98,7 @@ const workleft = document.querySelector('.workleft')
 const workright = document.querySelector('.workright')
 
 let counter = 1
+
 const size = carouseldivs[0].clientWidth
 
 carouselslide.style.transform = `translateX(${-size * counter}px)`
