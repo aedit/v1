@@ -435,6 +435,21 @@ article {
     text-decoration: underline;
     border: none;
   }
+  .buttonoff {
+    top: 0;
+    transform: none;
+    writing-mode: initial;
+    height: 60px !important;
+    box-sizing: border-box;
+    text-shadow: 0 0 1em 0 #c0c0c0;
+    color: white;
+    width: 30vw;
+    padding: 0;
+    margin: 0;
+    text-decoration: underline;
+    border: none;
+    display: flex;
+  }
   .contact {
     left: 25%;
   }
@@ -459,7 +474,7 @@ article {
     width: 0;
   }
   .wrap-contact100 {
-    padding-top: calc(70px + 10vh);
+    margin-top: calc(70px + 10vh);
     transform: scale(0.8);
   }
   .aboutcontent {
@@ -485,7 +500,7 @@ article {
     height: 40vh;
   }
   .workcontainer {
-    padding-top: calc(70px + 10vh);
+    margin-top: calc(70px + 10vh);
   }
   .workleft {
     left: 10px;
