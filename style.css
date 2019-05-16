@@ -16,7 +16,7 @@ body {
   height: 100vh;
   padding: 0;
   margin: 0;
-  /* background-image: linear-gradient(to bottom, #242424 -100% , #000000 200%  ); */
+  cursor: none;
 }
 .social {
   position: fixed;
