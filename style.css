@@ -48,6 +48,8 @@ body {
   height: 100vh;
   width: 100vw;
   z-index: -1;
+  background-image: linear-gradient(0deg, #6a6a6a -200%, #080808);
+  /* background: #08080860; */
 }
 input,
 label {
@@ -126,6 +128,7 @@ label {
   background: transparent;
   padding: 0;
   margin: 0;
+  /* background-image: linear-gradient(#6a6a6a -50%, #080808 111%) !important; */
 }
 .contentoff {
   transform: scale(0);
@@ -137,6 +140,11 @@ label {
 .hometitle {
   font-size: 4rem;
   text-shadow: 0 0 5px currentColor;
+  display: inline;
+  box-shadow: 0 0.4em 20px -15px rgba(0, 0, 0, 0.6);
+}
+.homesubtitle {
+  box-shadow: 0 1em 20px -15px rgba(0, 0, 0, 0.6);
 }
 .buttonoff {
   display: none;
