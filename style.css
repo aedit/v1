@@ -157,7 +157,7 @@ label {
   user-select: none;
   white-space: nowrap;
   filter: blur(0.007em);
-  animation: shake 2.5s linear forwards;
+  animation: shake 2.56 linear infinite forwards;
 }
 
 .hometitle span {
@@ -178,13 +178,13 @@ label {
 }
 
 .hometitle::before {
-  animation: crack1 2.5s linear forwards;
+  animation: crack1 2.6s linear infinite forwards;
   -webkit-clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
   clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
 }
 
 .hometitle::after {
-  animation: crack2 2.5s linear forwards;
+  animation: crack2 2.6s linear infinite forwards;
   -webkit-clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
   clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
 }
@@ -233,10 +233,11 @@ label {
 
 @keyframes crack1 {
   0%,
-  95% {
+  10% {
     transform: translate(-50%, -50%);
   }
 
+  80%,
   100% {
     transform: translate(-51%, -48%);
   }
@@ -244,10 +245,11 @@ label {
 
 @keyframes crack2 {
   0%,
-  95% {
+  10% {
     transform: translate(-50%, -50%);
   }
 
+  80%,
   100% {
     transform: translate(-49%, -53%);
   }
@@ -450,16 +452,16 @@ article {
   margin-top: 10px;
 }
 .project-image1 {
-  background-image: url('./images/p (1).png');
+  background-image: url('./images/hovergames.png');
 }
 .project-image2 {
-  background-image: url('./images/p (2).png');
+  background-image: url('./images/qiz.png');
 }
 .project-image3 {
-  background-image: url('./images/p (3).png');
+  background-image: url('./images/gcdcnewsletter.png');
 }
 .project-image4 {
-  background-image: url('./images/p (4).png');
+  background-image: url('./images/minesweeper.png');
 }
 .project-image5 {
   background-image: url('./images/p (5).png');
