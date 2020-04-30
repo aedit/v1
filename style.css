@@ -38,6 +38,16 @@ body {
   color: white;
   border: 0.1em dotted #c0c0c0;
 }
+.social a:hover *{
+  
+  color: black;
+}
+
+.social a:hover{
+  background-color: white;
+  color: black;
+}
+
 .social p {
   display: none;
 }
